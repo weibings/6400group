@@ -1,0 +1,58 @@
+<% include ./partials/header.ejs%>
+	<div class="card">
+		<div class="row">
+			<div class="col-md-7" style="margin:20vh auto">
+				<form action="/resources" method="POST">
+				<h2 style="margin-bottom: 40px;text-align: center">
+					Search Resources
+				</h2>					
+					
+					<div class="form-group row">
+					    <label for="keyword" class="col-sm-4 col-form-label">Keyword</label>
+					    <div class="col-sm-8">
+					        <input type="text" class="form-control-plaintext" id="keyword" value="12345">
+					    </div>
+					</div>
+					<div class="form-group row">
+						<label for="declaration" class="col-sm-4 col-form-label">Declaration</label>
+					    <div class="col-sm-8">
+						    <select class="form-control" id="declaration">
+					  	        <option>1</option>
+						        <option>2</option>
+						        <option>3</option>
+						        <option>4</option>
+						    </select>
+						</div>
+					</div>
+					<div class="form-group row">
+					    <label class="col-sm-4 col-form-label">Location</label>
+					    <label class="col-sm-2  col-form-label" style="padding-right: 0px">Within</label>
+					    <div class="col-sm-2" style="padding-left: 0px">
+					        <input type="number" step="1" class="form-control" id="dist" placeholder="10">
+					    </div>
+					    <label for="longitude" class="col-sm-4 col-form-label">Kilometers of incident</label>
+		
+					</div>
+					<div class="form-group row">
+					    <label for="description" class="col-sm-4 col-form-label">Description</label>
+					    <div class="col-sm-8">
+					        <input type="text" class="form-control" id="description">
+					    </div>
+					</div>
+					
+					<div class="form-group" style="float:right">
+						<a href="/main" class="btn btn-outline-primary">Cancel </a>
+						<button class="btn btn-outline-primary">Save</button>
+					</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function addText() {
+			let value = document.getElementById("capability").value;
+		    //var targ = event.target || event.srcElement;
+		    document.getElementById("capabilities").value += value+'\n';
+		    document.getElementById("capability").value = "";
+		}
+	</script>
+<% include ./partials/footer.ejs%>

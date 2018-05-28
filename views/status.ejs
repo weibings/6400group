@@ -1,0 +1,94 @@
+<% include ./partials/header.ejs%>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12" style="margin:20vh auto">
+				<form action="/resources" method="POST">
+				<h2 style="margin-bottom: 40px;text-align: center">
+					Resource Status
+				</h2>
+				<a href="/main" style="float:right" class="btn">X </a>	
+				<div>
+					<p style="margin-bottom: 10px">
+						Resources in use
+					</p>				
+					<table class="table table-bordered">
+					  <thead class="thead-dark">
+					    <tr>
+					      <th scope="col">ID</th>
+					      <th scope="col">Resource Name</th>
+					      <th scope="col">Incident</th>
+					      <th scope="col">Owner</th>
+					      <th scope="col">Start Date</th>
+					      <th scope="col">Return By</th>
+					      <th scope="col">Action</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <td>1</th>
+					      <td>Mark</td>
+					      <td>Otto</td>
+					      <td>@mdo</td>
+					      <td>Mark</td>
+					      <td>Otto</td>
+	 				      <td class="button bt-md btn-outline-primary">Request</td>
+					    </tr>
+					  </tbody>
+					</table>
+					</div>
+				<div>
+					<p style="margin-bottom: 10px">
+						Resources Requested by me
+					</p>				
+					<table class="table table-bordered">
+					  <thead class="thead-dark">
+					    <tr>
+					      <th scope="col">ID</th>
+					      <th scope="col">Resource Name</th>
+					      <th scope="col">Incident</th>
+					      <th scope="col">Owner</th>
+					      <th scope="col">Return By</th>
+					      <th scope="col">Action</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <td>1</th>
+					      <td>Otto</td>
+					      <td>@mdo</td>
+					      <td>Mark</td>
+					      <td>Otto</td>
+	 				      <td class="button bt-md btn-outline-primary">Request</td>
+					    </tr>
+					  </tbody>
+					</table>
+				</div>
+				<div>
+					<p style="margin-bottom: 10px">
+						Resources Requests received by me
+					</p>				
+					<table class="table table-bordered">
+					  <thead class="thead-dark">
+					    <tr>
+					      <th scope="col">ID</th>
+					      <th scope="col">Resource Name</th>
+					      <th scope="col">Incident</th>
+					      <th scope="col">Owner</th>
+					      <th scope="col">Return By</th>
+					      <th scope="col">Action</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <td>1</th>
+					      <td>Mark</td>
+					      <td>@mdo</td>
+					      <td>Mark</td>
+					      <td>Otto</td>
+	 				      <td class="button bt-md btn-outline-primary">Request</td>
+					    </tr>
+					  </tbody>
+					</table>
+				</div>
+				
+<% include ./partials/footer.ejs%>

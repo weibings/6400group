@@ -1,0 +1,39 @@
+<% include ./partials/header.ejs%>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12" style="margin:20vh auto">
+				<form action="/resources" method="POST">
+				<h2 style="margin-bottom: 40px;text-align: center">
+					Resource Report
+				</h2>	
+				<a href="/main" style="float:right" class="btn">X </a>	
+				<p style="margin-bottom: 40px;text-align: center">
+					Resource Report by Primary Emergency Support Function
+				</p>				
+				<table class="table table-bordered">
+				  <thead class="thead-dark">
+				    <tr>
+				      <th scope="col">ESF#</th>
+				      <th scope="col">Primary Emergency Support Function</th>
+				      <th scope="col">Total Resources</th>
+				      <th scope="col">Resources in Use</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>1</td>
+				      <td>Transportation</td>
+				      <td>5</td>
+				      <td>2</td>
+				    </tr>
+				  </tbody>
+				  <tfoot class="table-dark">
+				  	<tr>
+				      <td></td>
+				      <td style="text-align: center">Total</td>
+				      <td>5</td>
+				      <td>2</td>
+				    </tr>
+				  </tfoot>
+				</table>
+<% include ./partials/footer.ejs%>
