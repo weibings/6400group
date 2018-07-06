@@ -14,15 +14,18 @@
 		  </button>
 		  <div class="collapse  justify-content-end navbar-collapse" id="navbarTogglerDemo01">
 		    <ul class="navbar-nav  navbar-right">
+		    	<% if(!currentUser) {%>
 		      <li class="nav-item active">
 		        <a class="nav-link" href="/login">Login to ERMS</a>
 		      </li>
+		      <%} else{%>
 		      <li class="nav-item active">
-		        <a class="nav-link" href="/register">Sign Up</a>
+		        <a class="nav-link" href="#">Singed in as <strong><%=currentUser%></strong></a>
 		      </li>
 		      <li class="nav-item active">
 		        <a class="nav-link" href="/logout">Logout</a>
 		      </li>
+		      <%}%>
 		    </ul>
 		  </div>
 	</nav>

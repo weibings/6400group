@@ -20,19 +20,21 @@
 				    </tr>
 				  </thead>
 				  <tbody>
+				  	<%results.forEach(function(result){%>
 				    <tr>
-				      <td>1</td>
-				      <td>Transportation</td>
-				      <td>5</td>
-				      <td>2</td>
+				      <td><%=result[0]%></td>
+				      <td><%=result[1]%></td>
+				      <td><%=result[2]%></td>
+				      <td><%=result[3]%></td>
 				    </tr>
+				    <%})%>
 				  </tbody>
 				  <tfoot class="table-dark">
 				  	<tr>
 				      <td></td>
 				      <td style="text-align: center">Total</td>
-				      <td>5</td>
-				      <td>2</td>
+				      <td><%=total_res%></td>
+				      <td><%=res_in_use%></td>
 				    </tr>
 				  </tfoot>
 				</table>

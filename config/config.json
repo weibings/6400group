@@ -1,0 +1,18 @@
+{
+  "test": {
+    "PORT": 3000,
+    "user":"root",
+    "password":"mw141023",
+    "JWT_SECRET": "FTG7YHUJIKO",
+    "host":"localhost",
+    "database":"stadiums"
+  },
+  "development": {
+    "PORT": 3000,
+    "user":"root",
+    "password":"mw141023",
+    "JWT_SECRET": "RT78Y9JIONBH",
+    "host":"localhost",
+    "database":"stadiums"
+  }
+}

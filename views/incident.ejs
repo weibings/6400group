@@ -9,41 +9,44 @@
 					<div class="form-group row">
 						<label for="declaration" class="col-sm-4 col-form-label">Declaration</label>
 					    <div class="col-sm-8">
-						    <select class="form-control" id="declaration">
-					  	        <option>Major Disaster</option>
-						        <option>Emergency</option>
-						        <option>Fire Management</option>
-						        <option>Fire Suppression</option>
+						    <select class="form-control" name="declaration" id="declaration">
+					  	       <%declarations.forEach(function(declaration){%>
+						    	<option><%=declaration%></option>
+						    <%})%>
 						    </select>
 						</div>
 					</div>
 					<div class="form-group row">
-					    <label for="incidentID" class="col-sm-4 col-form-label">Incidnet ID</label>
+					    <label for="incidentID" class="col-sm-4 col-form-label">Incident ID</label>
 					    <div class="col-sm-8">
-					        <input type="text" class="form-control-plaintext" id="incidentID" value="12345">
+					        <input type="text" class="form-control-plaintext" name="incidentID" id="incidentID" value="12345">
 					    </div>
 					</div>
 					<div class="form-group row">
 						<label for="date" class="col-sm-4 col-form-label">Date</label>
 					    <div class="col-sm-8">
-					        <input type="Date" class="form-control" id="date" placeholder="MM/DD/YYYY">
+					        <input type="Date" class="form-control" name="date" id="date" placeholder="MM/DD/YYYY">
 					    </div>
 					</div>
 					<div class="form-group row">
 					    <label for="description" class="col-sm-4 col-form-label">Description</label>
 					    <div class="col-sm-8">
-					        <input type="text" class="form-control" id="description">
+					        <input type="text" class="form-control" name="description" id="description">
 					    </div>
 					</div>
 					<div class="form-group row">
 					    <label class="col-sm-4 col-form-label">Home Location</label>
-					    <label for="latitude" class="col-sm-2 col-form-label">Latitude</label>
-					    <div class="col-sm-2">
-					        <input type="number" step="0.001" class="form-control" id="latitude" placeholder="0.001">
+					    <div class="input-group-prepend" style="margin-left: 15px">
+						    <span class="input-group-text">Latitude</span>
+						</div> 
+					    <div class="col-sm-2" style="padding-left: 0;margin-right: 50px">
+					        <input type="number" step="0.001" class="form-control" name="latitude" id="incident_latitude" placeholder="0.001" max="90" min="-90">
 					    </div>
-					    <label for="longitude" class="col-sm-2 col-form-label">Longitude</label>
-					    <div class="col-sm-2">
-					        <input type="number" step="0.001" class="form-control" id="longitude" placeholder="0.001">
+					    <div class="input-group-prepend">
+						    <span class="input-group-text">Longitude</span>
+						</div> 
+					    <div class="col-sm-2" style="padding-left: 0">
+					        <input type="number" step="0.001" class="form-control" name="longitude" id="incident_longitude" placeholder="0.001" max="180" min="-180">
 					    </div>
 					</div>
 					<div class="form-group" style="float:right">
@@ -53,12 +56,4 @@
 			</div>
 		</div>
 	</div>
-	<script>
-		function addText() {
-			let value = document.getElementById("capability").value;
-		    //var targ = event.target || event.srcElement;
-		    document.getElementById("capabilities").value += value+'\n';
-		    document.getElementById("capability").value = "";
-		}
-	</script>
 <% include ./partials/footer.ejs%>
